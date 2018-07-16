@@ -9,7 +9,8 @@ import {
   curveCardinal,
   curveCardinalOpen,
   curveCardinalClosed,
-  curveNatural
+  curveNatural,
+  curveMonotoneX
 } from 'd3';
 
 const interpolate = (type) => {
@@ -34,6 +35,8 @@ const interpolate = (type) => {
       return curveCardinalClosed;
     case 'natural':
       return curveNatural;
+    case 'monotone':
+      return curveMonotoneX;
     default:
       return curveLinear;
   }
